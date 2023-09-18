@@ -41,3 +41,14 @@ set graduation = "08/09/2018" ; # didn't add a condition sice there is only one 
 12.delete from students
 where name = "Layal" ;
 
+14.select employees.name, employees.role, employees.company, companies.date from employees
+join companies on employees.company = companies.name ;
+
+15.select name from (select employees.name, employees.role, employees.company, companies.date from employees
+join companies on employees.company = companies.name )
+where date < 2000 ;
+
+16.select company from (select employees.name, employees.role, employees.company, companies.date from employees
+join companies on employees.company = companies.name )
+where role = "Graphic Designer" ;
+
