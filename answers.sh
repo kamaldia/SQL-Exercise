@@ -52,3 +52,16 @@ where date < 2000 ;
 join companies on employees.company = companies.name )
 where role = "Graphic Designer" ;
 
+18.select name from students
+where points = (select max(points) from students) ;
+
+19.select avg(points) from students ;
+
+20.select count(name) from students
+where points = 500 ;
+
+21.select name from students
+where name like "%s%" ;
+
+22.select name from students
+order by points desc ;
