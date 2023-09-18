@@ -21,3 +21,23 @@ WHERE
 set points = 350
 where
 	name = "Alex" ;
+
+CREATE TABLE "graduates" (
+	"ID"	INTEGER NOT NULL UNIQUE,
+	"Name"	TEXT NOT NULL UNIQUE,
+	"Age"	INTEGER,
+	"Gender"	TEXT,
+	"Points"	INTEGER,
+	"Graduation"	TEXT,
+	PRIMARY KEY("ID" AUTOINCREMENT)
+);
+
+10. insert into graduates (id, name, age, gender, points) select id, name, age, gender, points from students
+where name = "Layal" ;
+
+11. update graduates
+set graduation = "08/09/2018" ; # didn't add a condition sice there is only one row
+
+12.delete from students
+where name = "Layal" ;
+
